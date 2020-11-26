@@ -10,8 +10,8 @@ data "ibm_resource_group" "sysdig_resource_group" {
   name = var.resource_group
 }
 
-module "sysdig" {
-  source = "../../modules/sysdig_instance"
+module "sysdig_instance" {
+  source  = "terraform-ibm-modules/sysdig/ibm//modules/instance"
 
   service_name        = var.service_name
   resource_group_id   = data.ibm_resource_group.sysdig_resource_group.id
