@@ -26,7 +26,7 @@ module "sysdig_instance-key" {
   source  = "terraform-ibm-modules/sysdig/ibm//modules/instance-key"
 
   resource_key_name       = var.resource_key_name
-  resource_instance_id    = module.sysdig.sysdig_instance_id  
+  resource_instance_id    = module.sysdig_instance.sysdig_instance_id  
   role                    = var.role
   tags                    = var.key_tags
   parameters              = var.key_parameters
